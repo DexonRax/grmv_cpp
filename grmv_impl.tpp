@@ -21,9 +21,28 @@ void Grmv<DataType>::push(DataType val) {
 }
 
 template <typename DataType>
+void Grmv<DataType>::insert(DataType val, int index) {
+    DataType* new_values = new DataType[size + 1];
+    for (int i = 0; i < size + 1; i++) {
+        if(i < index){
+            new_values[i] = values[i];
+        }else if(i > index){
+            new_values[i] = values[i-1];
+        }else{
+            new_values[i] = val;
+        }
+        
+    }
+
+    delete[] values;
+    values = new_values;
+    size++;
+}
+
+template <typename DataType>
 void Grmv<DataType>::pop() {
     if (size == 0) {
-        throw std::out_of_range("Cannot pop from an empty container");
+        throw std::out_of_range("Cannot pop from an empty vector");
     }
     DataType* new_values = new DataType[size - 1];
     for (int i = 0; i < size - 1; i++) {
@@ -34,6 +53,26 @@ void Grmv<DataType>::pop() {
     values = new_values;
     size--;
 }
+
+template <typename DataType>
+void Grmv<DataType>::removeAt(int index) {
+    if (size == 0) {
+        throw std::out_of_range("Cannot remove from an empty vector");
+    }
+    DataType* new_values = new DataType[size - 1];
+    for (int i = 0; i < size; i++) {
+        if(i < index){
+            new_values[i] = values[i];
+        }else if(i > index){
+            new_values[i-1] = values[i];
+        }
+    }
+
+    delete[] values;
+    values = new_values;
+    size--;
+}
+
 
 template <typename DataType>
 int Grmv<DataType>::length() const {

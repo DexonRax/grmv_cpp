@@ -11,7 +11,9 @@ class Grmv {
     Grmv();
     ~Grmv();
     void push(DataType);
+    void insert(DataType, int);
     void pop();
+    void removeAt(int);
     int length() const;
     DataType get(int) const;
     DataType& operator[](int index);
