@@ -1,6 +1,13 @@
 
 # How to use
 
+push(value) -> pushes given value on top<br>
+pop() -> pops last index<br>
+insert(value, index) -> inserts value to given index shifting the stack above<br>
+removeAt(index) -> removes given index<br>
+get(index) -> gets value of given index (Foo[index] also works)<br>
+length() -> returns length of the vector<br>
+
 
     #include "grmv.h"
 
