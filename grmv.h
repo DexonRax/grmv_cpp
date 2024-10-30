@@ -15,6 +15,7 @@ class Grmv {
     void pop();
     void removeAt(int);
     int length() const;
+    bool isEmpty() const;
     DataType get(int) const;
     DataType& operator[](int index);
     const DataType& operator[](int index) const;

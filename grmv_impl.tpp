@@ -80,6 +80,11 @@ int Grmv<DataType>::length() const {
 }
 
 template <typename DataType>
+bool Grmv<DataType>::isEmpty() const {
+    return size==0;
+}
+
+template <typename DataType>
 DataType Grmv<DataType>::get(int index) const {
     if (index < 0 || index >= size) {
         throw std::out_of_range("Index out of range");
