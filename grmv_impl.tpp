@@ -1,3 +1,5 @@
+#include<stdexcept>
+
 template <typename DataType>
 Grmv<DataType>::Grmv() : values(nullptr), size(0) {}
 
