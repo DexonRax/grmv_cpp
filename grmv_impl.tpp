@@ -3,7 +3,6 @@
 template <typename DataType>
 Grmv<DataType>::Grmv() : values(nullptr), size(0) {}
 
-// Destructor
 template <typename DataType>
 Grmv<DataType>::~Grmv() {
     delete[] values;
