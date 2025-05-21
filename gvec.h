@@ -1,15 +1,16 @@
-#ifndef _GRMV_
-#define _GRMV_
+#ifndef _GVEC_
+#define _GVEC_
 
 template <typename DataType>
-class Grmv {
+class Gvec {
     private:
     DataType* values;
     int size = 0;
 
     public:
-    Grmv();
-    ~Grmv();
+    Gvec();
+    ~Gvec();
+    void reserve(int);
     void push(DataType);
     void insert(DataType, int);
     void pop();
@@ -21,6 +22,6 @@ class Grmv {
     const DataType& operator[](int index) const;
 };
 
-#include "grmv_impl.tpp"
+#include "gvec_impl.tpp"
 
 #endif

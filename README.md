@@ -10,11 +10,11 @@ int length()              -> returns length of the vector<br>
 bool isEmpty()            -> returns if vector is empty<br>
 
 
-    #include "grmv.h"
+    #include "gvec.h"
 
     int main(){
 
-        Grmv<int> Foo;
+        Gvec<int> Foo;
         Foo.push(1); //adds index 0 of value 1
         Foo.push(2); //adds index 1 of value 2
         Foo.push(3); //adds index 2 of value 3
